@@ -1,108 +1,114 @@
 module.exports = {
-  siteTitle: 'Hi! I\'m Francisco!',
-  siteDescription: `Create your online curriculum in just a few minutes with this starter`,
+  siteTitle: 'Hi! I\'m Tomás!',
+  siteDescription: 'This is my personal page',
   keyWords: ['gatsbyjs', 'react', 'curriculum'],
-  authorName: 'Francisco Santos',
-  twitterUsername: '_franciscodf',
-  githubUsername: 'santosfrancisco',
-  authorAvatar: '/images/avatar.jpeg',
-  authorDescription: `Developer, passionate about what I do. Always interested in how the sites were made, I started to study HTML by hobby. <br />
-    In 2012 I started working as a support technician and I approached the developers.
-    In 2015, I started to study C # and started to contribute with the team giving maintenance in an application in C # and .NET. <br />
-    I currently work as a frontend developer and mainly work with <strong>Javascript, NodeJS e React.</strong>`,
+  authorName: 'Tomás Novau',
+  twitterUsername: 'Tomas30715282',
+  githubUsername: 'tnovau',
+  authorAvatar: '/images/avatar.jpg',
+  authorDescription: `Full-Stack & DevOps - Javascript enthusiast, Guitarist and EU Citizen.
+    I started programming at 12. <br />
+    In 2016 I started working as a TSQL developer.
+    In 2017, I moved to JS and C#. Working on that languages since then <br />
+    I currently work as a Full-stack & DevOps mainly with <strong>Azure, CI/CD, Javascript, C#, NodeJS & React.</strong>`,
   skills: [
     {
-      name: 'HTML',
+      name: 'Front-end',
+      level: 85
+    },
+    {
+      name: 'Back-end',
+      level: 90
+    },
+    {
+      name: 'Mobile Cross-Platform',
+      level: 75
+    },
+    {
+      name: 'Devops',
       level: 70
     },
     {
-      name: 'CSS',
-      level: 60
+      name: 'Unit testing',
+      level: 90
     },
     {
-      name: 'Javascript',
+      name: 'Automation',
+      level: 70
+    },
+    {
+      name: 'Team leading',
       level: 50
     },
-    {
-      name: 'NodeJs',
-      level: 40
-    },
-    {
-      name: 'React',
-      level: 60
-    },
-    {
-      name: 'Git',
-      level: 70
-    },
-    /* more skills here */
   ],
   jobs: [
-    /* more portifolio items here */
     {
-      company: "Gympass",
+      company: "ALTRAN(Axa Assistance Client)",
       begin: {
-        month: 'sep',
+        month: 'apr',
         year: '2019'
       },
       duration: null,
-      occupation: "Frontend developer",
-      description: "I am part of the Corporate team, responsible for the development and maintenance of the employee management platform, giving more and more autonomy to partner companies."
-  
-    },  {
-      company: "Lendico",
+      occupation: "Full-Stack & DevOps",
+      description: "Maintenance of a claims app for a single client. Development of a new app that supports multiple clients. Maintenace of infrastructure and CI/CD."
+    }, {
+      company: "Whyline, INC",
       begin: {
-        month: 'apr',
+        month: 'nov',
         year: '2018'
       },
-      duration: null,
-      occupation: "Frontend developer",
-      description: "I integrate the Frontend team responsible for developing and maintaining the online lending platform."
-  
+      duration: '6 mos',
+      occupation: "Full-Stack & DevOps",
+      description: "Maintenance and Development of the whyline mobile app & admin portal."
     }, {
-      company: "Anapro",
+      company: "Endava(WellSky - formerly Mediware)",
       begin: {
-        month: 'dec',
-        year: '2016'
+        month: 'jul',
+        year: '2018'
       },
-      duration: '1 yr e 5 mos',
-      occupation: "Fullstack developer",
-      description: "Development and maintenance, corrective and preventive, of web applications for the real estate market."
+      duration: '5 mos',
+      occupation: "Full-Stack developer",
+      description: "Mantainance of healthcare web app."
     }, {
-      company: "Anapro",
+      company: "Holistor SA",
       begin: {
-        month: 'set',
-        year: '2012'
+        month: 'feb',
+        year: '2018'
       },
-      duration: '4 yrs e 3 mos',
-      occupation: "Support Technician",
-      description: "Responsible for the implementation and parameterization of the system, training and customer support. Acting also in person in real estate launches guaranteeing the success and good use of the tool."
-  
+      duration: '6 mos',
+      occupation: "Full-Stack & Team lead",
+      description: "Leading distributed team of 5 people. Developing mobile & web solutions. I+D & architecture proposals."
+    }, {
+      company: "AAJ Technologies",
+      begin: {
+        month: 'jan',
+        year: '2017'
+      },
+      duration: '1 yrs',
+      occupation: "Mobile & web developer",
+      description: "Developing mobile(cross-platform) & web solutions for multiple clients."
+    }, {
+      company: "NEORIS (Ternium Client)",
+      begin: {
+        month: 'jan',
+        year: '2017'
+      },
+      duration: '5 mos',
+      occupation: "SQL Developer",
+      description: "Mantainance of the Ternium's Data WareHouse."
     },
   ],
-  portifolio: [
-    {
-      image: "/images/gatsby-starter-cv.png",
-      description: "Gatsby starter CV template",
-      url: "https://www.gatsbyjs.org/starters/santosfrancisco/gatsby-starter-cv/"
-    },
-    {
-      image: "/images/awesome-grid.png",
-      description: "Responsive grid for ReactJS",
-      url: "https://github.com/santosfrancisco/react-awesome-styled-grid"
-    },
-    /* more portifolio items here */
-  ],
+  portifolio: [],
   social: {
-    twitter: "https://twitter.com/_franciscodf",
-    linkedin: "https://www.linkedin.com/in/santos-francisco",
-    github: "https://github.com/santosfrancisco",
-    email: "yoshi.df@gmail.com"
+    twitter: "https://twitter.com/Tomas30715282",
+    linkedin: "https://www.linkedin.com/in/tom%C3%A1s-novau-foresi-78b1b6125",
+    github: "https://github.com/tnovau",
+    email: "tnovau@gmail.com"
   },
-  siteUrl: 'https://santosfrancisco.github.io/gatsbystarter-cv',
-  pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
+  siteUrl: 'https://tnovau.github.io',
+  pathPrefix: '',
   siteCover: '/images/cover.jpeg',
-  googleAnalyticsId: 'UA-000000000-1',
+  googleAnalyticsId: 'UA-168259966-1',
   background_color: '#ffffff',
   theme_color: '#25303B',
   display: 'minimal-ui',
