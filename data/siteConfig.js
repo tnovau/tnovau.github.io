@@ -42,6 +42,7 @@ module.exports = {
     },
   ],
   jobs: [
+    /* more jobs here */
     {
       company: "ALTRAN(Axa Assistance Client)",
       begin: {
@@ -111,6 +112,8 @@ module.exports = {
   googleAnalyticsId: 'UA-168259966-1',
   background_color: '#ffffff',
   theme_color: '#25303B',
+  fontColor: "#000000cc",
+  enableDarkmode: true, // If true, enables dark mode switch
   display: 'minimal-ui',
   icon: 'src/assets/gatsby-icon.png',
   headerLinks: [
