@@ -118,7 +118,7 @@ module.exports = {
     /* more portifolio items here */
   ],
   social: {
-    twitter: "https://twitter.com/Tomas30715282",
+    twitter: "https://twitter.com/tomas_novau",
     linkedin: "https://www.linkedin.com/in/tom%C3%A1s-novau-foresi-78b1b6125",
     github: "https://github.com/tnovau",
     email: "tnovau@gmail.com"
