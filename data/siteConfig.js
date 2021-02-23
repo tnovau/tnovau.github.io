@@ -6,15 +6,15 @@ module.exports = {
   twitterUsername: 'Tomas30715282',
   githubUsername: 'tnovau',
   authorAvatar: '/images/avatar.jpg',
-  authorDescription: `Full-Stack & DevOps - Javascript enthusiast, Guitarist and EU Citizen.
+  authorDescription: `Sr. Full-Stack & DevOps - Javascript enthusiast, Guitarist and EU Citizen.
     I started programming at 12. <br />
     In 2016 I started working as a TSQL developer.
     In 2017, I moved to JS and C#. Working on that languages since then <br />
-    I currently work as a Full-stack & DevOps mainly with <strong>Azure, CI/CD, Javascript, C#, NodeJS & React.</strong>`,
+    I'm working at Tiendeo as a Sr. Full-stack & DevOps mainly with <strong>AWS, CI/CD, Javascript, Typescript, C#, NodeJS & React.</strong>`,
   skills: [
     {
       name: 'Front-end',
-      level: 85
+      level: 90
     },
     {
       name: 'Back-end',
@@ -22,19 +22,19 @@ module.exports = {
     },
     {
       name: 'Mobile Cross-Platform',
-      level: 75
+      level: 80
     },
     {
       name: 'Devops',
-      level: 70
+      level: 75
     },
     {
       name: 'Unit testing',
-      level: 90
+      level: 95
     },
     {
       name: 'Automation',
-      level: 70
+      level: 75
     },
     {
       name: 'Team leading',
@@ -44,12 +44,22 @@ module.exports = {
   jobs: [
     /* more jobs here */
     {
+      company: "Tiendeo",
+      begin: {
+        month: 'nov',
+        year: '2020'
+      },
+      duration: null,
+      occupation: "Sr. Full-stack developer",
+      description: "Maintenance and development of a webapp to claim for money of your purchases, for multiple countries and currencies. Maintenance of infrastructure and CI/CD."
+    },
+    {
       company: "ALTRAN(Axa Assistance Client)",
       begin: {
         month: 'apr',
         year: '2019'
       },
-      duration: null,
+      duration: '1 yrs 8 mos',
       occupation: "Full-Stack & DevOps",
       description: "Maintenance of a claims app for a single client. Development of a new app that supports multiple clients. Maintenace of infrastructure and CI/CD."
     }, {
@@ -99,7 +109,14 @@ module.exports = {
       description: "Mantainance of the Ternium's Data WareHouse."
     },
   ],
-  portifolio: [],
+  portifolio: [
+    {
+      image: "/images/react-circle-flags.png",
+      description: "",
+      url: "https://github.com/tnovau/react-circle-flags"
+    }
+    /* more portifolio items here */
+  ],
   social: {
     twitter: "https://twitter.com/Tomas30715282",
     linkedin: "https://www.linkedin.com/in/tom%C3%A1s-novau-foresi-78b1b6125",
