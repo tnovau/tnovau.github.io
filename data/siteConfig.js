@@ -10,7 +10,7 @@ module.exports = {
     I started programming at 12. <br />
     In 2016 I started working as a TSQL developer.
     In 2017, I moved to JS and C#. Working on that languages since then <br />
-    I'm working at Tiendeo as a Sr. Full-stack & DevOps mainly with <strong>AWS, CI/CD, Javascript, Typescript, C#, NodeJS & React.</strong>`,
+    I work as a Sr. Full-stack & DevOps mainly with <strong>AWS, CI/CD, Javascript, Typescript, C#, NodeJS & React.</strong> at Tiendeo`,
   skills: [
     {
       name: 'Front-end',
@@ -112,7 +112,7 @@ module.exports = {
   portifolio: [
     {
       image: "/images/react-circle-flags.png",
-      description: "",
+      description: "react-circle-flags",
       url: "https://github.com/tnovau/react-circle-flags"
     }
     /* more portifolio items here */
