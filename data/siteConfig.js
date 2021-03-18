@@ -101,19 +101,33 @@ module.exports = {
     }, {
       company: "NEORIS (Ternium Client)",
       begin: {
-        month: 'jan',
-        year: '2017'
+        month: 'sep',
+        year: '2016'
       },
       duration: '5 mos',
       occupation: "SQL Developer",
       description: "Mantainance of the Ternium's Data WareHouse."
-    },
+    }, {
+      company: "NEORIS Argentina(Internship)",
+      begin: {
+        month: 'aug',
+        year: '2016'
+      },
+      durantion: '1 mos',
+      occupation: "Intern",
+      description: "SQL Training"
+    }
   ],
   portifolio: [
     {
       image: "/images/react-circle-flags.png",
       description: "react-circle-flags",
       url: "https://github.com/tnovau/react-circle-flags"
+    },
+    {
+      image: "/images/pierre-chatel-innocenti-W5INoOK-5eI-unsplash.jpeg",
+      description: "fastify-mongo-swagger-auth0-boilerplate",
+      url: "https://github.com/tnovau/fastify-mongo-swagger-auth0-boilerplate"
     }
     /* more portifolio items here */
   ],
