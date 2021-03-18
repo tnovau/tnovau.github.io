@@ -6,11 +6,10 @@ module.exports = {
   twitterUsername: 'Tomas30715282',
   githubUsername: 'tnovau',
   authorAvatar: '/images/avatar.jpg',
-  authorDescription: `Sr. Full-Stack & DevOps - Javascript enthusiast, Guitarist and EU Citizen.
-    I started programming at 12. <br />
-    In 2016 I started working as a TSQL developer.
-    In 2017, I moved to JS and C#. Working on that languages since then <br />
-    I work as a Sr. Full-stack & DevOps mainly with <strong>AWS, CI/CD, Javascript, Typescript, C#, NodeJS & React.</strong> at Tiendeo`,
+  authorDescription: `Sr. Full-Stack & DevOps - Javascript enthusiast, Guitarist and EU Citizen.<br />
+    In 2016 I started working as a TSQL developer.<br />
+    In 2017, I moved to JS and C#. Working on that languages since then. <br /><br />
+    I work as a Sr. Full-stack & DevOps mainly with <strong>AWS, CI/CD, Javascript, Typescript, C#, NodeJS & React</strong> at Tiendeo.`,
   skills: [
     {
       name: 'Front-end',
