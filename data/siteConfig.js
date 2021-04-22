@@ -154,6 +154,10 @@ module.exports = {
     {
       label: 'Portifolio',
       url: '/portifolio',
-    }
+    },
+    {
+      label: 'Resume',
+      url: '/markdown-cv'
+    },
   ]
 }
