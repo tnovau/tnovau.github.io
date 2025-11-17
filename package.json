@@ -50,5 +50,8 @@
   },
   "bugs": {
     "url": "https://github.com/santosfrancisco/gatsby-starter-cv/issues"
+  },
+  "volta": {
+    "node": "14.21.3"
   }
 }
