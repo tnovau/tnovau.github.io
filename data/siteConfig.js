@@ -43,7 +43,7 @@ module.exports = {
   jobs: [
     /* more jobs here */
     {
-      company: "Freelance (KLagan - Insurance client)",
+      company: "On The Edge IT Solutions (KLagan - Insurance client)",
       begin: {
         month: 'dec',
         year: '2024'
@@ -53,7 +53,7 @@ module.exports = {
       description: "Development of web component for claims and digital contracts modelling app in vue.js, node.js and AWS."
     },
     {
-      company: "Freelance (Tiendeo)",
+      company: "On The Edge IT Solutions (Tiendeo)",
       begin: {
         month: 'mar',
         year: '2024'
@@ -63,7 +63,7 @@ module.exports = {
       description: "Integration of APIs during acquisition of a company. Maintenance of infrastructure and CI/CD."
     },
     {
-      company: "Freelance (IT Systems - Logistic client)",
+      company: "On The Edge IT Solutions (IT Systems - Logistic client)",
       begin: {
         month: 'nov',
         year: '2023'
