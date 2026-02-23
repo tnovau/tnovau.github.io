@@ -180,7 +180,7 @@ module.exports = {
     },
     {
       image: "/images/chord-builder.png",
-      description: "Chord builder app to create and share guitar chords",
+      description: "chord-builder-app",
       url: "https://github.com/tnovau/chord-builder-app"
     }
     /* more portifolio items here */
