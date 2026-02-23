@@ -177,6 +177,11 @@ module.exports = {
       image: "/images/pierre-chatel-innocenti-W5INoOK-5eI-unsplash.jpeg",
       description: "fastify-mongo-swagger-auth0-boilerplate",
       url: "https://github.com/tnovau/fastify-mongo-swagger-auth0-boilerplate"
+    },
+    {
+      image: "/images/chord-builder.png",
+      description: "Chord builder app to create and share guitar chords",
+      url: "https://github.com/tnovau/chord-builder-app"
     }
     /* more portifolio items here */
   ],
