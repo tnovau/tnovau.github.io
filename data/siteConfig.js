@@ -171,7 +171,7 @@ module.exports = {
     {
       image: "/images/react-circle-flags.png",
       description: "react-circle-flags",
-      url: "https://github.com/tnovau/react-circle-flags"
+      url: "https://github.com/on-the-edge-cloud/react-circle-flags"
     },
     {
       image: "/images/pierre-chatel-innocenti-W5INoOK-5eI-unsplash.jpeg",
@@ -182,6 +182,11 @@ module.exports = {
       image: "/images/chord-builder.png",
       description: "chord-builder-app",
       url: "https://github.com/tnovau/chord-builder-app"
+    },
+    {
+      image: "/images/track-your-time.png",
+      description: "track-your-time",
+      url: "https://github.com/tnovau/track-your-time"
     }
     /* more portifolio items here */
   ],
