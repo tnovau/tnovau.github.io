@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {/* {siteConfig.googleAnalyticsId && (
+        {siteConfig.googleAnalyticsId && (
           <>
             <script
               async
@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               }}
             />
           </>
-        )} */}
+        )}
       </head>
       <body className='light'>
         {children}

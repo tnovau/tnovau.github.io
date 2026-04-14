@@ -23,7 +23,7 @@ export interface PortfolioItem {
 }
 
 export interface Social {
-  twitter: string
+  twitter?: string
   linkedin: string
   github: string
   email: string
@@ -39,7 +39,7 @@ export interface SiteConfig {
   siteDescription: string
   keyWords: string[]
   authorName: string
-  twitterUsername: string
+  twitterUsername?: string
   githubUsername: string
   authorAvatar: string
   authorDescription: string
@@ -50,7 +50,7 @@ export interface SiteConfig {
   siteUrl: string
   pathPrefix: string
   siteCover: string
-  googleAnalyticsId: string
+  googleAnalyticsId?: string
   background_color: string
   theme_color: string
   fontColor: string
@@ -65,7 +65,6 @@ const siteConfig: SiteConfig = {
   siteDescription: 'This is my personal page',
   keyWords: ['next.js', 'react', 'curriculum'],
   authorName: 'Tomás Novau',
-  twitterUsername: 'Tomas30715282',
   githubUsername: 'tnovau',
   authorAvatar: '/images/avatar.jpg',
   authorDescription: `Sr. Full-Stack & DevOps - Javascript enthusiast, Guitarist and EU Citizen.<br />
@@ -248,7 +247,6 @@ const siteConfig: SiteConfig = {
     /* more portifolio items here */
   ],
   social: {
-    twitter: "https://twitter.com/tomas_novau",
     linkedin: "https://www.linkedin.com/in/tom%C3%A1s-novau-foresi-78b1b6125",
     github: "https://github.com/tnovau",
     email: "tnovau@gmail.com"
@@ -256,7 +254,6 @@ const siteConfig: SiteConfig = {
   siteUrl: 'https://tnovau.github.io',
   pathPrefix: '',
   siteCover: '/images/cover.jpeg',
-  googleAnalyticsId: 'UA-168259966-1',
   background_color: '#ffffff',
   theme_color: '#25303B',
   fontColor: "#000000cc",
