@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'next/link'
 import styled, { css } from 'styled-components'
 import { FaGithub } from "react-icons/fa"
 import { FiSun, FiMoon } from "react-icons/fi"
-import { withPrefix } from "gatsby"
 import Switch from 'react-switch'
 import siteConfig from '../../../data/siteConfig'
 
@@ -54,7 +53,7 @@ const HeaderLink = styled(Link)`
   padding-right: 20px;
   min-width: 42px;
   z-index: 10;
-  ${({ active }) => active && css`
+  ${({ $active }) => $active && css`
     pointer-events: none;
     border-bottom: 2px solid #fff;
   `}
@@ -89,8 +88,8 @@ const Header = ({ location, onChangeTheme, theme }) => {
         <HeaderLinkGroup>
           {headerLinks.map((headerLink, i) => (
             <HeaderLink
-              active={location.pathname === withPrefix(headerLink.url)}
-              to={headerLink.url}
+              $active={location.pathname === headerLink.url}
+              href={headerLink.url}
               key={`header-link-${i}`}
             >
               {headerLink.label}

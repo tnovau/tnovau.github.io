@@ -1,5 +1,4 @@
 import React from 'react'
-import { withPrefix } from 'gatsby'
 import siteConfig from '../../../data/siteConfig'
 import styled from 'styled-components'
 
@@ -34,7 +33,7 @@ const Hero = ({ className, title }) => (
 )
 
 export default styled(Hero)`
-  ${p => `background-image: url(${p.heroImg || withPrefix(siteConfig.siteCover)});`}
+  ${p => `background-image: url(${p.heroImg || siteConfig.siteCover});`}
   height: 70vh;
   background-attachment: fixed;
   background-position: bottom center;

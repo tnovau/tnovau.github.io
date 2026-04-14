@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
+import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { ResetCSS, GlobalStyle, themes } from '../styles'
 import Header from '../header'
@@ -18,7 +19,9 @@ const StyledContainer = styled.div`
   overflow-x: hidden;
 `
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children }) => {
+  const pathname = usePathname()
+  const location = { pathname }
   const [theme, setTheme] = useDarkMode()
   useEffect(() => {
     animateOnScroll()
@@ -30,7 +33,7 @@ const Layout = ({ children, location }) => {
     <StyledContainer>
       <Header location={location} onChangeTheme={setTheme} theme={theme} />
       <motion.main
-        key={location}
+        key={pathname}
         variants={variants}
         initial="initial"
         animate="enter"
@@ -44,7 +47,6 @@ const Layout = ({ children, location }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.string.isRequired,
 }
 
 

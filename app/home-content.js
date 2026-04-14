@@ -1,20 +1,17 @@
-import React from 'react'
+'use client'
+
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-awesome-styled-grid'
 import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa"
-import siteConfig from '../../data/siteConfig'
-import { withPrefix } from "gatsby"
-import loadable from '@loadable/component'
+import siteConfig from '../data/siteConfig'
 
-import Hero from '../components/hero'
-import SEO from '../components/SEO'
-import Wrapper from '../components/wrapper'
-import About from '../components/about'
-import Skills from '../components/skills'
-import Timeline from '../components/timeline'
-import Repositories from '../components/repositories'
-
-const Layout = loadable(() => import('../components/layout'))
+import Hero from '../src/components/hero'
+import Wrapper from '../src/components/wrapper'
+import About from '../src/components/about'
+import Skills from '../src/components/skills'
+import Timeline from '../src/components/timeline'
+import Repositories from '../src/components/repositories'
+import Layout from '../src/components/layout'
 
 const Separator = styled.hr`
   margin-top: 24px;
@@ -23,33 +20,26 @@ const Separator = styled.hr`
   opacity: .2;
 `
 
-const Home = ({ className, location }) => {
-  // validate siteConfig settings
+const Home = ({ className }) => {
   if (siteConfig.googleAnalyticsId === 'UA-000000000-1') {
     console.error('WARNING: Please set a proper googleAnalyticsId. See https://analytics.google.com for details.');
   }
 
   const title = siteConfig.siteTitle
-  const { keywords } = siteConfig
   return (
-    <Layout location={location}>
-      <SEO
-        title={title}
-        keywords={keywords}
-      />
-
+    <Layout>
       <Hero
         heroImg={siteConfig.siteCover}
         title={title}
       />
 
       <Wrapper className={className} >
-        <Container className="page-content" fluid>
+        <Container className="page-content" fluid={true}>
           <Row>
             <Col xs={4} className='avatar'>
               <img
                 className='avatar__image'
-                src={withPrefix(siteConfig.authorAvatar)}
+                src={siteConfig.authorAvatar}
                 alt='user avatar'
               />
               <div className="social">

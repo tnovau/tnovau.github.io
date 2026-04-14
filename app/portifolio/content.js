@@ -1,14 +1,12 @@
+'use client'
+
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { Container, Row, Col } from 'react-awesome-styled-grid'
 import siteConfig from '../../data/siteConfig'
-import { withPrefix } from "gatsby"
-import loadable from '@loadable/component'
-import Hero from '../components/hero'
-import SEO from '../components/SEO'
-import Wrapper from '../components/wrapper'
-
-const Layout = loadable(() => import('../components/layout'))
+import Hero from '../../src/components/hero'
+import Wrapper from '../../src/components/wrapper'
+import Layout from '../../src/components/layout'
 
 const Image = styled.img`
   max-height: 220px;
@@ -31,18 +29,13 @@ const JobCard = styled.a`
   `}
 `
 
-const Portifolio = ({ className, location }) => {
+const Portifolio = ({ className }) => {
   const title = "Portifolio"
-  const { keywords, portifolio } = siteConfig
+  const { portifolio } = siteConfig
   return (
-    <Layout location={location}>
-      <SEO
-        title={title}
-        keywords={keywords}
-      />
-
+    <Layout>
       <Hero
-        heroImg={withPrefix('/images/pierre-chatel-innocenti-W5INoOK-5eI-unsplash.jpeg')}
+        heroImg={'/images/pierre-chatel-innocenti-W5INoOK-5eI-unsplash.jpeg'}
         title={title}
       />
 
@@ -59,7 +52,7 @@ const Portifolio = ({ className, location }) => {
                   href={job.url}
                   target="_blank"
                 >
-                  <Image src={withPrefix(job.image)} />
+                  <Image src={job.image} />
                   <p>{job.description}</p>
                 </JobCard>
               </Col>
