@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: 'Hi! I\'m Tomás!',
   siteDescription: 'This is my personal page',
-  keyWords: ['gatsbyjs', 'react', 'curriculum'],
+  keyWords: ['next.js', 'react', 'curriculum'],
   authorName: 'Tomás Novau',
   twitterUsername: 'Tomas30715282',
   githubUsername: 'tnovau',
@@ -174,11 +174,6 @@ module.exports = {
       url: "https://github.com/on-the-edge-cloud/react-circle-flags"
     },
     {
-      image: "/images/pierre-chatel-innocenti-W5INoOK-5eI-unsplash.jpeg",
-      description: "fastify-mongo-swagger-auth0-boilerplate",
-      url: "https://github.com/tnovau/fastify-mongo-swagger-auth0-boilerplate"
-    },
-    {
       image: "/images/chord-builder.png",
       description: "chord-builder-app",
       url: "https://github.com/tnovau/chord-builder-app"
@@ -205,7 +200,7 @@ module.exports = {
   fontColor: "#000000cc",
   enableDarkmode: true, // If true, enables dark mode switch
   display: 'minimal-ui',
-  icon: 'src/assets/gatsby-icon.png',
+  icon: 'src/assets/logo.svg',
   headerLinks: [
     {
       label: 'Home',

@@ -1,42 +1,25 @@
 'use client'
 
-import React from 'react'
-import styled from 'styled-components'
 import Hero from '../src/components/hero'
 import Wrapper from '../src/components/wrapper'
 import Layout from '../src/components/layout'
 
-const MainTitle = styled.h1`
-  line-height: 1.5;
-  text-align: center;
-  font-size: 3rem;
-`
-
-const Icon = styled.div`
-  width: 150px;
-  margin: 0 auto;
-`
-
-const Text = styled.p`
-  text-align: center;
-`
-
 export default function NotFoundPage() {
   return (
-    <Layout>
+    <Layout keyName="not-found">
       <Hero
         heroImg={'/images/404.jpeg'}
         title='404'
       />
       <Wrapper>
-        <MainTitle>404 Page Not Found</MainTitle>
-        <Icon>
+        <h1 className="leading-relaxed text-center text-5xl">404 Page Not Found</h1>
+        <div className="w-[150px] mx-auto">
           <img src={'/images/ufo-and-cow.svg'} alt='ufo and cow' />
-        </Icon>
-        <Text>
+        </div>
+        <p className="text-center">
           Looks like you&apos;ve followed a broken link or entered a URL that
           doesn&apos;t exist on this site.
-        </Text>
+        </p>
       </Wrapper>
     </Layout>
   )

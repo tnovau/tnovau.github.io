@@ -1,73 +1,56 @@
 'use client'
 
-import React from 'react'
-import styled, { css } from 'styled-components'
-import { Container, Row, Col } from 'react-awesome-styled-grid'
 import siteConfig from '../../data/siteConfig'
 import Hero from '../../src/components/hero'
 import Wrapper from '../../src/components/wrapper'
 import Layout from '../../src/components/layout'
 
-const Image = styled.img`
-  max-height: 220px;
-  max-width: 220px;
-  object-fit: cover;
-  object-position: center center;
-  border-radius: 10px;
-  box-shadow: 24px 47px 79px -21px rgba(0,0,0,0.51);
-`
-
-const JobCard = styled.a`
-  text-decoration: none;
-  color: inherit;
-
-  ${({ href }) => href && css`
-    &:hover ${Image}{
-      transition: transform .5s;
-      transform: translateY(-5px);
-    }
-  `}
-`
-
-const Portifolio = ({ className }) => {
+const Portifolio = () => {
   const title = "Portifolio"
   const { portifolio } = siteConfig
   return (
-    <Layout>
+    <Layout keyName="portifolio">
       <Hero
         heroImg={'/images/pierre-chatel-innocenti-W5INoOK-5eI-unsplash.jpeg'}
         title={title}
       />
 
-      <Wrapper className={className}>
-        <Container className="page-content" fluid>
-          <Row>
+      <Wrapper>
+        <div className="max-w-full mb-10">
+          <div className="flex flex-wrap">
             {portifolio.map(job => (
-              <Col
+              <div
                 key={job.description}
-                align="center"
+                className="flex-1 flex flex-col items-center px-2"
               >
-                <JobCard
-                  as={job.url ? "a" : "div"}
-                  href={job.url}
-                  target="_blank"
-                >
-                  <Image src={job.image} />
-                  <p>{job.description}</p>
-                </JobCard>
-              </Col>
+                {job.url ? (
+                  <a
+                    className="no-underline text-inherit group"
+                    href={job.url}
+                    target="_blank"
+                  >
+                    <img
+                      className="max-h-[220px] max-w-[220px] object-cover object-center rounded-[10px] shadow-[24px_47px_79px_-21px_rgba(0,0,0,0.51)] transition-transform duration-500 group-hover:-translate-y-[5px]"
+                      src={job.image}
+                    />
+                    <p>{job.description}</p>
+                  </a>
+                ) : (
+                  <div>
+                    <img
+                      className="max-h-[220px] max-w-[220px] object-cover object-center rounded-[10px] shadow-[24px_47px_79px_-21px_rgba(0,0,0,0.51)]"
+                      src={job.image}
+                    />
+                    <p>{job.description}</p>
+                  </div>
+                )}
+              </div>
             ))}
-          </Row>
-        </Container>
+          </div>
+        </div>
       </Wrapper>
     </Layout>
   )
 }
 
-export default styled(Portifolio)`
-  .page-content {
-    max-width: 100%;
-    margin-bottom: 40px;
-  }
-
-`
+export default Portifolio

@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default ({ title = 'about', text = '' }) => {
   return (
     <div>

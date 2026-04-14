@@ -1,8 +1,3 @@
-'use client'
-
-import styled from 'styled-components'
-import { Container, Row, Col } from 'react-awesome-styled-grid'
-import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa"
 import siteConfig from '../data/siteConfig'
 
 import Hero from '../src/components/hero'
@@ -10,114 +5,42 @@ import Wrapper from '../src/components/wrapper'
 import About from '../src/components/about'
 import Skills from '../src/components/skills'
 import Timeline from '../src/components/timeline'
-import Repositories from '../src/components/repositories'
 import Layout from '../src/components/layout'
+import dynamic from 'next/dynamic'
 
-const Separator = styled.hr`
-  margin-top: 24px;
-  margin-bottom: 16px;
-  background-color: ${({ theme }) => theme.colors.fontColor};
-  opacity: .2;
-`
+const Repositories = dynamic(() => import('../src/components/repositories'))
 
-const Home = ({ className }) => {
+const Home = () => {
   if (siteConfig.googleAnalyticsId === 'UA-000000000-1') {
     console.error('WARNING: Please set a proper googleAnalyticsId. See https://analytics.google.com for details.');
   }
 
   const title = siteConfig.siteTitle
   return (
-    <Layout>
+    <Layout keyName="home">
       <Hero
         heroImg={siteConfig.siteCover}
         title={title}
       />
 
-      <Wrapper className={className} >
-        <Container className="page-content" fluid={true}>
-          <Row>
-            <Col xs={4} className='avatar'>
-              <img
-                className='avatar__image'
-                src={siteConfig.authorAvatar}
-                alt='user avatar'
-              />
-              <div className="social">
-                {siteConfig.social.github && <a className="social-link github" href={siteConfig.social.github}>
-                  <FaGithub className="social-icon" size="32" />
-                </a>}
-                {siteConfig.social.linkedin && <a className="social-link linkedin" href={siteConfig.social.linkedin}>
-                  <FaLinkedin className="social-icon" size="32" />
-                </a>}
-                {siteConfig.social.twitter && <a className="social-link twitter" href={siteConfig.social.twitter}>
-                  <FaTwitter className="social-icon" size="32" />
-                </a>}
-                {siteConfig.social.email && <a className="social-link email" href={`mailto:${siteConfig.social.email}`}>
-                  <FaEnvelope className="social-icon" size="32" />
-                </a>}
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={4} sm={4}>
+      <Wrapper>
+        <div className="max-w-full mb-10">
+          <div className="flex flex-wrap">
+            <div className="w-full md:w-1/2 px-2 flex flex-col">
               <About title='About' text={siteConfig.authorDescription}/>
-            </Col>
-            <Col xs={4} sm={4}>
+            </div>
+            <div className="w-full md:w-1/2 px-2 flex flex-col">
               <Skills title='Skills' skills={siteConfig.skills} />
-            </Col>
-          </Row>
-          <Separator />
+            </div>
+          </div>
+          <hr className="mt-6 mb-4 bg-font opacity-20" />
           <Timeline />
-          <Separator />
+          <hr className="mt-6 mb-4 bg-font opacity-20" />
           {siteConfig.githubUsername && <Repositories />}
-        </Container>
+        </div>
       </Wrapper>
     </Layout>
   )
 }
 
-export default styled(Home)`
-  .page-content {
-    max-width: 100%;
-    margin-bottom: 40px;
-  }
-
-  .avatar {
-    align-items: center;
-    margin-bottom: 24px;
-    flex-direction: column;
-  }
-
-  .avatar__image {
-    box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
-    max-width: 200px;
-    border-radius: 100px;
-    margin: 0 auto 24px;
-  }
-
-  .social {
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-
-  .social-link {
-    padding: 8px;
-    color: #555;
-  }
-
-  a.social-link.twitter:hover {
-    color: #1da1f2;
-  }
-
-  a.social-link.github:hover {
-    color: #24292e;
-  }
-
-  a.social-link.linkedin:hover {
-    color: #0077B5;
-  }
-
-  a.social-link.email:hover {
-    color: #c23a2b;
-  }
-`
+export default Home

@@ -1,5 +1,4 @@
-import React from 'react'
-import StyledComponentsRegistry from '../lib/registry'
+import './globals.css'
 import siteConfig from '../data/siteConfig'
 
 export const metadata = {
@@ -26,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {siteConfig.googleAnalyticsId && (
+        {/* {siteConfig.googleAnalyticsId && (
           <>
             <script
               async
@@ -43,44 +42,10 @@ export default function RootLayout({ children }) {
               }}
             />
           </>
-        )}
+        )} */}
       </head>
-      <body>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (() => {
-                window.__onThemeChange = function() {};
-                function setTheme(newTheme) {
-                  window.__theme = newTheme;
-                  preferredTheme = newTheme;
-                  document.body.className = newTheme;
-                  window.__onThemeChange(newTheme);
-                }
-
-                let preferredTheme
-                try {
-                  preferredTheme = localStorage.getItem('theme')
-                } catch (err) {}
-
-                window.__setPreferredTheme = newTheme => {
-                  setTheme(newTheme)
-                  try {
-                    localStorage.setItem('theme', newTheme)
-                  } catch (err) {}
-                }
-
-                let darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
-                darkQuery.addListener(e => {
-                  window.__setPreferredTheme(e.matches ? 'dark' : 'light')
-                })
-
-                setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
-              })()
-            `,
-          }}
-        />
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      <body className='light'>
+        {children}
       </body>
     </html>
   )
