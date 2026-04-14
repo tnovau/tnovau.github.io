@@ -1,4 +1,66 @@
-module.exports = {
+export interface Skill {
+  name: string
+  level: number
+}
+
+export interface JobDate {
+  month: string
+  year: string
+}
+
+export interface Job {
+  company: string
+  begin: JobDate
+  duration: string | null
+  occupation: string
+  description: string
+}
+
+export interface PortfolioItem {
+  image: string
+  description: string
+  url: string
+}
+
+export interface Social {
+  twitter: string
+  linkedin: string
+  github: string
+  email: string
+}
+
+export interface HeaderLink {
+  label: string
+  url: string
+}
+
+export interface SiteConfig {
+  siteTitle: string
+  siteDescription: string
+  keyWords: string[]
+  authorName: string
+  twitterUsername: string
+  githubUsername: string
+  authorAvatar: string
+  authorDescription: string
+  skills: Skill[]
+  jobs: Job[]
+  portifolio: PortfolioItem[]
+  social: Social
+  siteUrl: string
+  pathPrefix: string
+  siteCover: string
+  googleAnalyticsId: string
+  background_color: string
+  theme_color: string
+  fontColor: string
+  enableDarkmode: boolean
+  display: string
+  icon: string
+  headerLinks: HeaderLink[]
+}
+
+const siteConfig: SiteConfig = {
   siteTitle: 'Hi! I\'m Tomás!',
   siteDescription: 'This is my personal page',
   keyWords: ['next.js', 'react', 'curriculum'],
@@ -162,7 +224,7 @@ module.exports = {
         month: 'aug',
         year: '2016'
       },
-      durantion: '1 mos',
+      duration: '1 mos',
       occupation: "Intern",
       description: "SQL Training"
     }
@@ -216,3 +278,5 @@ module.exports = {
     },
   ]
 }
+
+export default siteConfig

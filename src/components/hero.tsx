@@ -1,6 +1,11 @@
 import siteConfig from '../../data/siteConfig'
 
-const Hero = ({ heroImg, title }) => (
+interface HeroProps {
+  heroImg?: string
+  title: string
+}
+
+const Hero = ({ heroImg, title }: HeroProps) => (
   <div
     className="relative table w-full overflow-hidden h-[70vh] bg-fixed bg-bottom bg-no-repeat bg-cover"
     style={{ backgroundImage: `url(${heroImg || siteConfig.siteCover})` }}

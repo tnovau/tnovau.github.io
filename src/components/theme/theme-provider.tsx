@@ -1,18 +1,26 @@
 'use client'
 
+import type { ReactNode } from 'react'
 import { createContext, useContext, useState, useEffect, useCallback } from 'react'
 
-const ThemeContext = createContext({ theme: 'light', toggleTheme: () => {} })
+type Theme = 'light' | 'dark'
 
-export function useTheme() {
+interface ThemeContextType {
+  theme: Theme
+  toggleTheme: () => void
+}
+
+const ThemeContext = createContext<ThemeContextType>({ theme: 'light', toggleTheme: () => {} })
+
+export function useTheme(): ThemeContextType {
   return useContext(ThemeContext)
 }
 
-export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState('light')
+export function ThemeProvider({ children }: { children: ReactNode }) {
+  const [theme, setTheme] = useState<Theme>('light')
 
   useEffect(() => {
-    const initial = document.body.className || 'light'
+    const initial = (document.body.className || 'light') as Theme
     setTheme(initial)
   }, [])
 

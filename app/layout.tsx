@@ -1,7 +1,9 @@
+import type { Metadata } from 'next'
+import type { ReactNode } from 'react'
 import './globals.css'
 import siteConfig from '../data/siteConfig'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     template: `%s | ${siteConfig.siteTitle}`,
     default: siteConfig.siteTitle,
@@ -21,7 +23,7 @@ export const metadata = {
   },
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>

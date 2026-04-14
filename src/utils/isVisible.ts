@@ -1,5 +1,5 @@
-const isVisible = el => {
-  let rect = el.boundingClientRect
+const isVisible = (el: IntersectionObserverEntry): boolean => {
+  const rect = el.boundingClientRect
 
   if (!rect) return true
 
@@ -12,7 +12,7 @@ const isVisible = el => {
   )
 }
 
-export const animateOnScroll = (t) => {
+export const animateOnScroll = (t?: NodeListOf<Element>): void => {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if(isVisible(entry)) {
@@ -24,5 +24,4 @@ export const animateOnScroll = (t) => {
   const targets = t || document.querySelectorAll('.animate-on-scroll')
 
   targets.forEach(target => observer.observe(target))
-
 }

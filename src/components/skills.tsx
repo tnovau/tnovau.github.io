@@ -1,6 +1,12 @@
+import type { Skill } from '../../data/siteConfig'
 import SkillBar from './skill-bar'
 
-export default function Skills({ title = 'Skills', skills = [] }) {
+interface SkillsProps {
+  title?: string
+  skills?: Skill[]
+}
+
+export default function Skills({ title = 'Skills', skills = [] }: SkillsProps) {
   return (
     <div className="w-full">
       <h1>{title}</h1>

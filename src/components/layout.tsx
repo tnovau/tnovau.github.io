@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import * as motion from 'motion/react-client'
 import { ThemeProvider } from './theme/theme-provider'
 import Footer from './footer'
@@ -10,7 +11,12 @@ const variants = {
   enter: { y: 0, opacity: 1, transition: { duration: 0.5 } },
 }
 
-const Layout = ({ children, keyName }) => {
+interface LayoutProps {
+  children: ReactNode
+  keyName: string
+}
+
+const Layout = ({ children, keyName }: LayoutProps) => {
   return (
     <ThemeProvider>
       <div className="bg-bg overflow-x-hidden">

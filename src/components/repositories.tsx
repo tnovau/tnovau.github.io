@@ -6,13 +6,22 @@ import siteConfig from '../../data/siteConfig'
 
 import Loader from './loader'
 
+interface GitHubRepo {
+  name: string
+  html_url: string
+  description: string | null
+  updated_at: string
+  stargazers_count: number
+  fork: boolean
+}
+
 const endpoint =
   `https://api.github.com/users/${siteConfig.githubUsername}/repos?type=owner&sort=updated&per_page=5&page=1`
 
 
 function Repositories() {
-  const [repos, setRepos] = useState([]);
-  const [status, setStatus] = useState('loading');
+  const [repos, setRepos] = useState<GitHubRepo[]>([]);
+  const [status, setStatus] = useState<'loading' | 'ready'>('loading');
 
   useEffect(() => {
     async function fetchRepos() {

@@ -1,7 +1,7 @@
-import siteConfig from '../../data/siteConfig'
+import type { Metadata } from 'next'
 import PortifolioContent from './content'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Portifolio',
 }
 
